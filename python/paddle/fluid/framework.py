@@ -3528,7 +3528,7 @@ class IrGraph(object):
         viz_pass.apply(self.graph)
         _convert_to_pdf(viz_dot_path)
 
-    def to_program(self):
+    def to_program(self, org_desc):
         """
         Convert the graph into a Program.
 
@@ -3540,11 +3540,11 @@ class IrGraph(object):
             Program: a program converted from the graph.
         """
         convert_pass = core.get_pass('graph_to_program_pass')
-        desc = core.ProgramDesc()
-        convert_pass.set_not_owned('program', desc)
+        updated_desc = org_desc
+        convert_pass.set_not_owned('program', updated_desc)
         convert_pass.apply(self.graph)
-        program = Program._construct_from_desc(desc)
-        return program
+        updated_program = Program._construct_from_desc(updated_desc)
+        return updated_program
 
     def _find_node_by_name(self, nodes, node_name):
         """
