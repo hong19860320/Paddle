@@ -172,7 +172,7 @@ PD_REGISTER_ACTIVATION_KERNEL(hardtanh, HardTanhKernel)
 PD_REGISTER_ACTIVATION_KERNEL(leaky_relu, LeakyReluKernel)
 PD_REGISTER_ACTIVATION_KERNEL(thresholded_relu, ThresholdedReluKernel)
 PD_REGISTER_ACTIVATION_KERNEL(relu6_raw, Relu6RawKernel)
-PD_REGISTER_ACTIVATION_KERNEL(hard_shrink, HardShrinkKernel)
+PD_REGISTER_ACTIVATION_KERNEL(hardshrink, HardShrinkKernel)
 PD_REGISTER_ACTIVATION_KERNEL(softshrink, SoftShrinkKernel)
 PD_REGISTER_ACTIVATION_KERNEL(tanh_shrink, TanhShrinkKernel)
 PD_REGISTER_ACTIVATION_KERNEL(elu, EluKernel)
@@ -210,7 +210,7 @@ PD_REGISTER_KERNEL(
 PD_REGISTER_ACTIVATION_KERNEL(softsign, SoftsignKernel)
 PD_REGISTER_ACTIVATION_KERNEL(sigmoid, SigmoidKernel)
 PD_REGISTER_ACTIVATION_KERNEL(logsigmoid, LogSigmoidKernel)
-PD_REGISTER_ACTIVATION_KERNEL(hard_sigmoid, HardSigmoidKernel)
+PD_REGISTER_ACTIVATION_KERNEL(hardsigmoid, HardSigmoidKernel)
 PD_REGISTER_ACTIVATION_KERNEL(swish, SwishKernel)
 
 PD_REGISTER_KERNEL(log,
